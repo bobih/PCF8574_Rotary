@@ -18,7 +18,7 @@
 
 
 
-
+PCF8574 PCF01(0x27);
 
 #define LATCH0 0 // input state at position 0
 #define LATCH3 3 // input state at position 3
