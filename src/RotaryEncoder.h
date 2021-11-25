@@ -19,6 +19,11 @@
 #define RotaryEncoder_h
 #include "Arduino.h"
 
+#include "PCF8574.h"
+
+PCF8574 PCF02(0x27);
+
+
 class RotaryEncoder
 {
 public:

@@ -14,11 +14,6 @@
 
 #include "RotaryEncoder.h"
 #include "Arduino.h"
-#include "PCF8574.h"
-
-
-
-PCF8574 PCF02(0x27);
 
 #define LATCH0 0 // input state at position 0
 #define LATCH3 3 // input state at position 3
