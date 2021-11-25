@@ -39,7 +39,7 @@ const int8_t KNOBDIR[] = {
 
 // ----- Initialization and Default Values -----
 
-RotaryEncoder::RotaryEncoder(int pin1, int pin2, LatchMode mode, PCF8574 PCF02)
+RotaryEncoder::RotaryEncoder(int pin1, int pin2, LatchMode mode, PCF8574 *PCF02)
 {
   // Remember Hardware Setup
   _pin1 = pin1;

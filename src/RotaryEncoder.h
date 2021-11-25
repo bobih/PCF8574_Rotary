@@ -39,7 +39,7 @@ public:
   };
 
   // ----- Constructor -----
-  RotaryEncoder(int pin1, int pin2, LatchMode mode = LatchMode::FOUR0, PCF8574 PCF02);
+  RotaryEncoder(int pin1, int pin2, LatchMode mode = LatchMode::FOUR0, PCF8574 *PCF02 = &PCF8574);
 
   // retrieve the current position
   long getPosition();
