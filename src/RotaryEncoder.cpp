@@ -14,6 +14,7 @@
 
 #include "RotaryEncoder.h"
 #include "Arduino.h"
+#include "PCF8574.h"
 
 #define LATCH0 0 // input state at position 0
 #define LATCH3 3 // input state at position 3
@@ -38,7 +39,7 @@ const int8_t KNOBDIR[] = {
 
 // ----- Initialization and Default Values -----
 
-RotaryEncoder::RotaryEncoder(int pin1, int pin2, LatchMode mode)
+RotaryEncoder::RotaryEncoder(int pin1, int pin2, LatchMode mode, PCF8574 PCF02)
 {
   // Remember Hardware Setup
   _pin1 = pin1;

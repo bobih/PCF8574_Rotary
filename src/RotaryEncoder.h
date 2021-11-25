@@ -18,10 +18,9 @@
 #ifndef RotaryEncoder_h
 #define RotaryEncoder_h
 #include "Arduino.h"
-
 #include "PCF8574.h"
 
-PCF8574 PCF02(0x27);
+//PCF8574 PCF02(0x27);
 
 
 class RotaryEncoder
@@ -40,7 +39,7 @@ public:
   };
 
   // ----- Constructor -----
-  RotaryEncoder(int pin1, int pin2, LatchMode mode = LatchMode::FOUR0);
+  RotaryEncoder(int pin1, int pin2, LatchMode mode = LatchMode::FOUR0, PCF8574 PCF02);
 
   // retrieve the current position
   long getPosition();
