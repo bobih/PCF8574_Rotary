@@ -18,7 +18,7 @@
 
 
 
-PCF8574 PCF01(0x27);
+PCF8574 PCF02(0x27);
 
 #define LATCH0 0 // input state at position 0
 #define LATCH3 3 // input state at position 3
@@ -55,8 +55,8 @@ RotaryEncoder::RotaryEncoder(int pin1, int pin2, LatchMode mode)
   //pinMode(pin2, INPUT_PULLUP);
 
   // when not started in motion, the current state of the encoder should be 3
-  int sig1 = PCF01.read(_pin1);
-  int sig2 = PCF01.read(_pin2);
+  int sig1 = PCF02.read(_pin1);
+  int sig2 = PCF02.read(_pin2);
   _oldState = sig1 | (sig2 << 1);
 
   // start with position 0;
@@ -115,8 +115,8 @@ void RotaryEncoder::setPosition(long newPosition)
 
 void RotaryEncoder::tick(void)
 {
-  int sig1 = PCF01.read(_pin1);
-  int sig2 = PCF01.read(_pin2);
+  int sig1 = PCF02.read(_pin1);
+  int sig2 = PCF02.read(_pin2);
   int8_t thisState = sig1 | (sig2 << 1);
 
   if (_oldState != thisState) {
