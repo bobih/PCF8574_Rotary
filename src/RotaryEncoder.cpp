@@ -14,6 +14,10 @@
 
 #include "RotaryEncoder.h"
 #include "Arduino.h"
+#include "PCF8574.h"
+
+
+
 
 
 #define LATCH0 0 // input state at position 0
@@ -111,8 +115,8 @@ void RotaryEncoder::setPosition(long newPosition)
 
 void RotaryEncoder::tick(void)
 {
-  int sig1 = PCF8574.read(_pin1);
-  int sig2 = PCF8574.read(_pin2);
+  int sig1 = PCF01.read(_pin1);
+  int sig2 = PCF01.read(_pin2);
   int8_t thisState = sig1 | (sig2 << 1);
 
   if (_oldState != thisState) {
