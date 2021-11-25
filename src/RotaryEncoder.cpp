@@ -55,8 +55,8 @@ RotaryEncoder::RotaryEncoder(int pin1, int pin2, LatchMode mode)
   //pinMode(pin2, INPUT_PULLUP);
 
   // when not started in motion, the current state of the encoder should be 3
-  int sig1 = PCF8574.read(_pin1);
-  int sig2 = PCF8574.read(_pin2);
+  int sig1 = PCF01.read(_pin1);
+  int sig2 = PCF01.read(_pin2);
   _oldState = sig1 | (sig2 << 1);
 
   // start with position 0;
