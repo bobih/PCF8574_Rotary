@@ -2,4 +2,4 @@
 ---
 deployment:
   tasks:
-    - /bin/ln -s /DATA/mediaoto/rotary/src /DATA/mediaoto/rotary/lnk
+    - /bin/ln -s /DATA/mediaoto/rotary/src /DATA/mediaoto/public_html/lnk
