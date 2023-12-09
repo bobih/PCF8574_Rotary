@@ -1,5 +1,0 @@
-#### THIS ALLOWS US TO DEPLOY THE SITE FROM A GIT REPO ######
----
-deployment:
-  tasks:
-    - /bin/ln -s /DATA/mediaoto/rotary/src /DATA/mediaoto/rotary/lnk
